@@ -8,10 +8,9 @@ if __name__ == "__main__":
     number_of_args = len(argv) - 1
     if number_of_args == 0:
         print(f"{number_of_args:d} arguments.")
-    elif number_of_args == 1:
+    if number_of_args == 1:
         print(f"{number_of_args:d} argument:")
-        print(f"{number_of_args:d}: {argv[1]}")
-    else:
+    if number_of_args > 1:
         print(f"{number_of_args:d} arguments:")
     while count < len(argv):
         print(f"{count:d}: {argv[count]}")
