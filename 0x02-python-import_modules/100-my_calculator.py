@@ -4,8 +4,6 @@ if __name__ == "__main__":
     from calculator_1 import add, mul, div, sub
     from sys import argv, exit
 
-    addition = 0
-
     # excludes name of file
     number_of_args = len(argv) - 1
 
@@ -16,7 +14,7 @@ if __name__ == "__main__":
     operat = argv[2]
 
     if operat != '+' and operat != '-' and operat != '*' and operat != '/':
-        print("Unknown operat. Available operats: +, -, * and /")
+        print("Unknown operator. Available operats: +, -, * and /")
         exit(1)
 
     a = int(argv[1])
