@@ -8,8 +8,8 @@ def print_matrix_integer(matrix=[[]]):
     You are not allowed to cast integers into strings
     You have to use str.format() to print integers
     """
-    
-    for row in matrix:
-        for col in row:
+
+    for row in len(matrix):
+        for col in len(row):
             print("{:d}".format(col), end=" ")
         print()
