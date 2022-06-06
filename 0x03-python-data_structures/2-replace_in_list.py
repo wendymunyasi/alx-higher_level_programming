@@ -2,7 +2,7 @@
 
 def replace_in_list(my_list, idx, element):
     """function that replaces an element at specific position
-    
+
     If idx is negative, the function should not modify anything, and
     returns the original list
     If idx is out of range (> of number of element in my_list), the
