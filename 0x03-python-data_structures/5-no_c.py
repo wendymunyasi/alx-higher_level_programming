@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-from re import I
-
-
 def no_c(my_string):
     """function that removes all characters c and C from string
 
