@@ -10,6 +10,6 @@ def print_matrix_integer(matrix=[[]]):
     """
 
     for row in len(matrix):
-        for col in len(row):
+        for col in row:
             print("{:d}".format(col), end=" ")
         print()
