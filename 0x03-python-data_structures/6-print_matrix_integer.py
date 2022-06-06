@@ -9,7 +9,5 @@ def print_matrix_integer(matrix=[[]]):
     You have to use str.format() to print integers
     """
     
-    for row in len(matrix):
-        for col in len(row):
-            print("{}{}".format(matrix[row][col]), end=" ")
-        print()
+    for element in matrix:
+        print(" ".join(":d".format(value) for value in element))
