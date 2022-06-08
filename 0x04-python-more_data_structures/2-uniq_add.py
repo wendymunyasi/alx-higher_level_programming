@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-from unittest import result
-
-
 def uniq_add(my_list=[]):
     """adds all unique integers in a list (only once for each integer)
     You are not allowed to import any module
