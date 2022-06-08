@@ -10,8 +10,8 @@ def print_sorted_dictionary(a_dictionary):
     You are not allowed to import any module
     """
 
-    # for key, value in sorted(a_dictionary.items(), key=lambda x: x[0]):
-    #     print("{} : {}".format(key, value))  ## alternative
+    for key, value in sorted(a_dictionary.items(), key=lambda x: x[0]):
+        print("{} : {}".format(key, value))  # alternative
 
-    for key, value in sorted(a_dictionary.items()):
-        print("{} : {}".format(key, value))
+    # for key, value in sorted(a_dictionary.items()):
+    #     print("{} : {}".format(key, value))
