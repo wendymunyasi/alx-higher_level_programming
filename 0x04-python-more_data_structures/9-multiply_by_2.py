@@ -10,6 +10,6 @@ def multiply_by_2(a_dictionary):
     dict_keys = list(new_dict.keys())
 
     for i in dict_keys:
-        i *= 2
+        dict_keys[i] *= 2
 
     return new_dict
