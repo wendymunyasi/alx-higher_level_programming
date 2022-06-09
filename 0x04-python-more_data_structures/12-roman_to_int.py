@@ -25,7 +25,7 @@ def roman_to_int(roman_string):
     If the roman_string is not a string or None, return 0
     """
     if not roman_string:
-        return 0 or None
+        return 0
 
     result = 0
     i = 0
