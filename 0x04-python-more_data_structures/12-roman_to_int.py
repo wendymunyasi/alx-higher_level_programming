@@ -1,19 +1,21 @@
 #!/usr/bin/python3
 
-def value(r):
-    if r == 'I':
+def value(roman):
+    """returns value of each Roman symbol
+    """
+    if roman == 'I':
         return 1
-    if r == 'V':
+    if roman == 'V':
         return 5
-    if r == 'X':
+    if roman == 'X':
         return 10
-    if r == 'L':
+    if roman == 'L':
         return 50
-    if r == 'C':
+    if roman == 'C':
         return 100
-    if r == 'D':
+    if roman == 'D':
         return 500
-    if r == 'M':
+    if roman == 'M':
         return 1000
     return 0
 
