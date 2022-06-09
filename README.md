@@ -21,8 +21,8 @@ All of the following folders are projects done during the studies:
 
 | Project name | Description |
 | ------------ | ----------- |
-| [`0x00-python-hello_world`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x00-python-hello_world) | It aims to learn about python programming, the Zen of Python, how to use Python interpreter and print text using `print` in **Python language**.|
-| [`0x01-python-if_else_loops_functions`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x01-python-if_else_loops_functions) | It aims to learn about if, else and loops in **Python language**.|
-| [`0x02-python-import_modules`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x02-python-import_modules) | It aims to learn about importing functions from another file and modules in **Python language**.|
-| [`0x03-python-data_structures`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x03-python-data_structures) | It aims to learn about data structures - lists and tuples - in **Python language**.|
-| [`0x04-python-more_data_structures`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x04-python-more_data_structures) | It aims to learn more about data structures - sets, dictionaries, lamda functions etc in **Python language**.|
+| [`0x00. Python - Hello, World`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x00-python-hello_world) | It aims to learn about python programming, the Zen of Python, how to use Python interpreter and print text using `print` in **Python language**.|
+| [`0x01. Python - if/else, loops, functions`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x01-python-if_else_loops_functions) | It aims to learn about if, else and loops in **Python language**.|
+| [`0x02. Python - import & modules`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x02-python-import_modules) | It aims to learn about importing functions from another file and modules in **Python language**.|
+| [`0x03. Python - Data Structures: Lists, Tuples`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x03-python-data_structures) | It aims to learn about data structures - lists and tuples - in **Python language**.|
+| [`0x04. Python - More Data Structures: Set, Dictionary`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x04-python-more_data_structures) | It aims to learn more about data structures - sets, dictionaries, lamda functions etc in **Python language**.|
