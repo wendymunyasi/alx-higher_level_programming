@@ -17,10 +17,12 @@ def list_division(my_list_1, my_list_2, list_length):
             quotient = my_list_1[item] / my_list_2[item]
         except IndexError:
             print("out of range")
+            quotient = 0
         except TypeError:
             quotient = 0
         except ZeroDivisionError:
             print("division by 0")
+            quotient = 0
         finally:
             new_list.append(quotient)
     return new_list
