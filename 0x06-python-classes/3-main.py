@@ -13,3 +13,6 @@ try:
     print(my_square_1.__size)
 except Exception as e:
     print(e)
+
+my_square_2 = Square(5)
+print("Area: {}".format(my_square_2.area()))
