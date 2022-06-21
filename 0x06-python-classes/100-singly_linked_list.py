@@ -85,7 +85,7 @@ class SinglyLinkedList:
         """
         temp_var = self.__head
         print_node = []
-        while(temp_var):
+        while temp_var:
             print_node.sort()
             print_node.append(str(temp_var.data))
             temp_var = temp_var.next_node
