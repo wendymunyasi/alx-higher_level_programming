@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Defines a class Square"""
+
 
 class Square:
     """
@@ -10,4 +12,4 @@ class Square:
         Args:
             size: size of the square.
         """
-        self.__private_memeber = size
+        self.__private_size = size
