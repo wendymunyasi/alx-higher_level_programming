@@ -13,7 +13,8 @@ class Square:
         """Creates new instances of square.
 
         Args:
-            size: size of the square (1 side).
+            __size (int): size of the square (1 side).
+            __position (tuple): position of the square.
         """
         self.__size = size
         self.__position = position
@@ -55,9 +56,11 @@ class Square:
 
         if self.__size == 0:
             print()
-        for i in range(self.__position[1]):
+        for j in range(self.__position[1]):
             print()
         for i in range(self.__size):
+            for k in range(self.__position[0]):
+                print(" ",  end="")
             print("#" * (self.__size))
 
     @property
