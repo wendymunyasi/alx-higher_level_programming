@@ -4,17 +4,16 @@
 
 class Square:
     """
-    Class that defines properties of a square by: (based on 0-square.py)
+    Class that defines properties of square by: (based on 2-square.py).
 
     Attributes:
-        size: size of a square (1 side)
-        area: area of a square (area**2)
+        size: size of a square (1 side).
     """
     def __init__(self, size=0):
-        """Creates new instances of square
+        """Creates new instances of square.
 
         Args:
-            size: size of the square.
+            size: size of the square (1 side).
         """
         self.__size = size
 
@@ -26,7 +25,7 @@ class Square:
             self.__size = size
 
     def area(self):
-        """Calculates the area of a square
+        """Calculates the area of square.
 
         Returns: the current square area.
         """
