@@ -14,8 +14,7 @@ def add_integer(a, b=98):
         b (int, optional): Second value. Defaults to 98.
 
     Raises:
-        TypeError: a must be an integer
-        TypeError: b must be an integer
+        TypeError: If a and b are not integers or floats.
 
     Returns:
         int: Sum of a and b.
