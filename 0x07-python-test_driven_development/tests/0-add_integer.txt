@@ -1,0 +1,121 @@
+# The ``0-add_integer`` module
+============================================
+How to use 0-add_integer.py
+============================================
+
+This library has one function called ``add_integer()``
+
+Numbers
+=======
+
+``add_integer()`` returns the sum of its arguments. The default argument
+for b is 98. For numbers, that value is equivalent to using the ``+``
+operator:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer(1, 2)
+	3
+
+Non-Numbers
+===========
+
+Because add_integer() doesn't take non-numbers it should throw an error
+if a non-number is passed as one of its arguments.
+
+
+	>>> add_integer(2, 3.0) #doctest: +REPORT_NDIFF
+	5
+
+	>>> add_integer(3.0, 3)
+	6
+
+    >>> add_integer(3.0, 9.0) #doctest: +REPORT_NDIFF
+    12
+
+    >>> add_integer(12.3, 9.0) #doctest: +REPORT_NDIFF
+    21
+
+    >>> add_integer(12.3, 9.8) #doctest: +REPORT_NDIFF
+    21
+
+	>>> add_integer('a', 3)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+	>>> add_integer((), 3)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+	>>> add_integer({}, 3)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+    >>> add_integer([], 3)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+	>>> add_integer(2, '3')
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
+
+	>>> add_integer(2, ())
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
+
+	>>> add_integer(2, {})
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
+
+    >>> add_integer(3, [])
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+    >>> add_integer((3, 4))
+    Traceback (most recent call last):
+              ...
+    TypeError: a must be an integer
+
+	>>> add_integer(2, 3, 5, 6) #doctest: +ELLIPSIS
+	Traceback (most recent call last):
+		...
+	TypeError: add_integer() takes from 1 to 2 positional arguments but ...
+
+    >>> add_integer(, 3)
+    Traceback (most recent call last):
+      File "/usr/lib/python3.8/doctest.py", line 1336, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 0-add_integer.txt[14]>", line 1
+        add_integer(, 3)
+                    ^
+    SyntaxError: invalid syntax
+                    
+    >>> add_integer(,)
+    Traceback (most recent call last):
+      File "/usr/lib/python3.8/doctest.py", line 1336, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 0-add_integer.txt[15]>", line 1
+        add_integer(,)
+                    ^
+    SyntaxError: invalid syntax
+
+    >>> add_integer(/)
+    Traceback (most recent call last):
+      File "/usr/lib/python3.8/doctest.py", line 1336, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 0-add_integer.txt[16]>", line 1
+        add_integer(/)
+                    ^
+    SyntaxError: invalid syntax
+
+    >>> add_integer(b) #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    NameError: name ... is not defined
+	
