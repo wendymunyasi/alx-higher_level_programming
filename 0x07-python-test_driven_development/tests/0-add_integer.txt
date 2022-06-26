@@ -12,6 +12,7 @@ Numbers
 for b is 98. For numbers, that value is equivalent to using the ``+``
 operator:
 
+Importing the function add_integer.
     >>> add_integer = __import__('0-add_integer').add_integer
 	>>> add_integer(1, 2)
 	3
@@ -22,100 +23,212 @@ Non-Numbers
 Because add_integer() doesn't take non-numbers it should throw an error
 if a non-number is passed as one of its arguments.
 
-
+Adding an integer and a float.
 	>>> add_integer(2, 3.0) #doctest: +REPORT_NDIFF
 	5
 
+Adding a float and an integer.
 	>>> add_integer(3.0, 3)
 	6
 
+Passing one argument.
+    >>> add_integer(2)
+    100
+
+Adding a positive and negative integer.
+    >>> add_integer(2, -4)
+    -2
+
+Adding a negative and positive integer.
+    >>> add_integer(-6, 8)
+    2
+
+Adding an integer and a bool.
+    >>> add_integer(4, True)
+    5
+
+Adding a bool and integer.
+    >>> add_integer(True, 4)
+    5
+
+Adding two bools.
+    >>> add_integer(False, True)
+    1
+
+Adding two bools.
+    >>> add_integer(True, True)
+    2
+
+Passing one bool argument.
+    >>> add_integer(True, )
+    99
+
+Adding an integer and a bool.
+    >>> add_integer(4, False)
+    4
+
+Adding a bool and n integer.
+    >>> add_integer(False, 4)
+    4
+
+Adding two bools.
+    >>> add_integer(True, False)
+    1
+
+Adding two bools.
+    >>> add_integer(False, False)
+    0
+
+Passing one bool argument.
+    >>> add_integer(False, )
+    98
+
+Adding two float values.
     >>> add_integer(3.0, 9.0) #doctest: +REPORT_NDIFF
     12
 
+Adding two float values.
     >>> add_integer(12.3, 9.0) #doctest: +REPORT_NDIFF
     21
 
+Adding two float values.
     >>> add_integer(12.3, 9.8) #doctest: +REPORT_NDIFF
     21
 
+Passing None as the only argument.
+    >>> add_integer(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+Adding an integer and None.
+    >>> add_integer(2, None)
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+Adding a string and an integer.
 	>>> add_integer('a', 3)
 	Traceback (most recent call last):
 		...
 	TypeError: a must be an integer
 
+Adding a tuple and integer.
 	>>> add_integer((), 3)
 	Traceback (most recent call last):
 		...
 	TypeError: a must be an integer
 
+Adding a set and an integer.
 	>>> add_integer({}, 3)
 	Traceback (most recent call last):
 		...
 	TypeError: a must be an integer
 
+Adding a list and an integer.
     >>> add_integer([], 3)
     Traceback (most recent call last):
         ...
     TypeError: a must be an integer
 
+Adding an integer and a string.
 	>>> add_integer(2, '3')
 	Traceback (most recent call last):
 		...
 	TypeError: b must be an integer
 
+Adding an integer and a tuple.
 	>>> add_integer(2, ())
 	Traceback (most recent call last):
 		...
 	TypeError: b must be an integer
 
+Adding an integer and a set.
 	>>> add_integer(2, {})
 	Traceback (most recent call last):
 		...
 	TypeError: b must be an integer
 
+Adding an integer and a set.
     >>> add_integer(3, [])
     Traceback (most recent call last):
         ...
     TypeError: b must be an integer
 
+Passing a tuple as the only argument.
     >>> add_integer((3, 4))
     Traceback (most recent call last):
-              ...
+        ...
     TypeError: a must be an integer
 
+Adding a nan and an integer.
+    >>> add_integer(float("nan"), 4)
+    Traceback (most recent call last):
+        ...
+    ValueError: cannot convert float NaN to integer
+
+Adding an integer and a nan.
+    >>> add_integer(1, float('nan'))
+    Traceback (most recent call last):
+        ...
+    ValueError: cannot convert float NaN to integer
+
+Adding an integer and a positive undefined number.
+    >>> add_integer(1, float('inf'))
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+Adding an integer and a negative undefined number.
+    >>> add_integer(1, float('-inf'))
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+Adding a positive undefined number and an integer.
+    >>> add_integer(float('inf'), 1)
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+Adding a negative undefined number and an integer.
+    >>> add_integer(float('-inf'), 1)
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+Passing more than 2 arguments to the function.
 	>>> add_integer(2, 3, 5, 6) #doctest: +ELLIPSIS
 	Traceback (most recent call last):
 		...
 	TypeError: add_integer() takes from 1 to 2 positional arguments but ...
 
+Passing only the second argument.
     >>> add_integer(, 3)
     Traceback (most recent call last):
-      File "/usr/lib/python3.8/doctest.py", line 1336, in __run
-        exec(compile(example.source, filename, "single",
-      File "<doctest 0-add_integer.txt[14]>", line 1
-        add_integer(, 3)
-                    ^
+        ...
     SyntaxError: invalid syntax
-                    
+
+Passing only a symbol.
     >>> add_integer(,)
     Traceback (most recent call last):
-      File "/usr/lib/python3.8/doctest.py", line 1336, in __run
-        exec(compile(example.source, filename, "single",
-      File "<doctest 0-add_integer.txt[15]>", line 1
-        add_integer(,)
-                    ^
+        ...
     SyntaxError: invalid syntax
 
+Passing only a symbol.
     >>> add_integer(/)
     Traceback (most recent call last):
-      File "/usr/lib/python3.8/doctest.py", line 1336, in __run
-        exec(compile(example.source, filename, "single",
-      File "<doctest 0-add_integer.txt[16]>", line 1
-        add_integer(/)
-                    ^
+        ...
     SyntaxError: invalid syntax
 
+Passing an undefined variable.
     >>> add_integer(b) #doctest: +ELLIPSIS
     Traceback (most recent call last):
+        ...
     NameError: name ... is not defined
-	
+
+Passing 0 arguments.
+    >>> add_integer()
+    Traceback (most recent call last):
+        ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
