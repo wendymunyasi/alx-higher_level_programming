@@ -4,7 +4,7 @@
 
 class Rectangle:
     """
-    Class that defines properties of rectangle by: (based on 1-rectangle.py).
+    Class that defines properties of rectangle by: (based on 2-rectangle.py).
 
     Attributes:
         width (int): width of the rectangle.
@@ -92,3 +92,21 @@ class Rectangle:
             return 0
         else:
             return 2 * (self.__height + self.__width)
+
+    def __str__(self):
+        """Prints the rectangle with the character # .
+
+        Returns:
+            str: the rectangle
+        """
+        rectangle = []
+
+        if self.__width == 0 or self.__height == 0:
+            return ""
+
+        for i in range(self.__height):
+            for j in range(self.__width):
+                rectangle.append("#")
+            rectangle.append("\n")
+
+        return "".join(rectangle)
