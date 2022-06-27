@@ -85,7 +85,7 @@ class Rectangle:
         Returns:
             int: area.
         """
-        return self.__height * self.__width
+        return self.height * self.width
 
     def perimeter(self):
         """Calculates perimeter of a rectangle
