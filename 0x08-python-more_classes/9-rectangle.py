@@ -170,7 +170,4 @@ class Rectangle:
         Returns:
             Square: the new rectangle with equal values of height and width .
         """
-        width = size
-        height = size
-
-        return cls(width, height)
+        return cls(size, size)
