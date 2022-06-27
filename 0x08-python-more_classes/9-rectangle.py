@@ -79,6 +79,20 @@ class Rectangle:
         else:
             self.__height = value
 
+    @classmethod
+    def square(cls, size=0):
+        """Returns a new rectangle instance with width == height == size.
+
+        Args:
+            cls: used to access class attributes.
+            size (int, optional): size of rectangle (1 side). Defaults to 0.
+
+        Returns:
+            Square: the new rectangle with equal values of height and width .
+        """
+
+        return cls(size, size)
+
     def area(self):
         """Calculates area of a rectangle.
 
@@ -158,16 +172,3 @@ class Rectangle:
             return rect_1
 
         return rect_2
-
-    @classmethod
-    def square(cls, size=0):
-        """Returns a new rectangle instance with width == height == size.
-
-        Args:
-            size (int, optional): size of rectangle (1 side). Defaults to 0.
-
-        Returns:
-            Square: the new rectangle with equal values of height and width .
-        """
-
-        return cls(size, size)
