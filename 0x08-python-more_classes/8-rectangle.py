@@ -85,7 +85,7 @@ class Rectangle:
         Returns:
             int: area.
         """
-        return self.height * self.width
+        return self.__height * self.__width
 
     def perimeter(self):
         """Calculates perimeter of a rectangle
@@ -151,7 +151,9 @@ class Rectangle:
         if not isinstance(rect_2, Rectangle):
             TypeError("rect_2 must be an instance of Rectangle")
 
-        if rect_1.area() >= rect_2.area():
+        if rect_1.area() > rect_2.area():
             return rect_1
-        else:
+        elif rect_1.area() == rect_2.area():
+            return rect_1
+        elif rect_1.area() < rect_2.area():
             return rect_2
