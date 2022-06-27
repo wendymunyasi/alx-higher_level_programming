@@ -2,9 +2,6 @@
 """Defines a class Rectangle"""
 
 
-from cmath import rect
-
-
 class Rectangle:
     """
     Class that defines properties of rectangle by: (based on 2-rectangle.py).
@@ -111,8 +108,5 @@ class Rectangle:
             for j in range(self.__width):
                 rectangle.append("#")
             rectangle.append("\n")
-
-        # remove the blank line at the end of rectangle
-        rectangle.pop()
 
         return "".join(rectangle)
