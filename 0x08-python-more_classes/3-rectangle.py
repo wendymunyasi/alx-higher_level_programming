@@ -108,7 +108,8 @@ class Rectangle:
             for j in range(self.__width):
                 rectangle.append("#")
             rectangle.append("\n")
-            
+
+        # remove blank line
         rectangle.pop()
 
         return "".join(rectangle)
