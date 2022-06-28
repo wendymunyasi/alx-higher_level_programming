@@ -1,0 +1,66 @@
+# The ``5-text_indentation`` module
+============================================
+How to use 5-text_indentation.py
+============================================
+
+This library has one function called ``text_indentation()``
+
+Numbers
+=======
+
+``text_indentation()`` prints a text with 2 new lines after each of these
+characters: ., ? and :
+
+Importing the function matrix_divided.
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Passing the given text.
+    >>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere?""")
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    <BLANKLINE>
+    Quonam modo?
+    <BLANKLINE>
+    Utrum igitur tibi litteram videor an totas paginas commovere?
+    <BLANKLINE>
+
+Passing an empty string as text.
+    >>> text_indentation("")
+
+Passing a text with space at the beginning.
+    >>> text_indentation("        Hello Breezy")
+    Hello Breezy
+
+Printing a word with spaces around it.
+    >>> text_indentation("    Villegas    ")
+    Villegas
+
+Printing a word with a special character at the end.
+    >>> text_indentation("    Hello    .")
+    Hello.
+    <BLANKLINE>
+
+Passing a text with space between words and a special character at end.
+    >>> text_indentation("What is up baby doll?    how are you?")
+    What is up baby doll?
+    <BLANKLINE>
+    how are you?
+    <BLANKLINE>
+
+Passing a non-string as text.
+    >>> text_indentation(123)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+Passing None as text:
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+Passing no arguments to text_indentation.
+    >>> text_indentation()
+    Traceback (most recent call last):
+        ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
