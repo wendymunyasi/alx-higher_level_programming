@@ -10,7 +10,7 @@ Numbers
 
 ``print_square()`` prints a square with the character #.
 
-Importing the function matrix_divided.
+Importing the function print_square.
     >>> print_square = __import__('4-print_square').print_square
 
 Passing an integer as size.
