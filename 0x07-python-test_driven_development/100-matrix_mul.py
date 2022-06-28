@@ -11,7 +11,7 @@ def matrix_mul(m_a, m_b):
     lists_err = "{} must be a list of lists"
     empty_err = "{} can't be empty"
     type_err = "{} should contain only integers or floats"
-    size_err = "each row of {} must should be of the same size"
+    size_err = "each row of {} must be of the same size"
     value_err = "{} and {} can't be multiplied"
 
     if not isinstance(m_a, list) or not isinstance(m_b, list):
@@ -63,3 +63,6 @@ def matrix_mul(m_a, m_b):
                 new_matrix[i][n] += m_a[i][k] * m_b[k][n]
 
     return new_matrix
+
+
+
