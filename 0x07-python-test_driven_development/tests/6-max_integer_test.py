@@ -15,6 +15,7 @@ class TestMaxInteger(unittest.TestCase):
         test_list1 = [1, 2, 3, 4]
         test_list2 = [ 4, 1, 2, 3]
         test_list3 = [1, 2, 4, 2, 3]
+
         self.assertEqual(max_integer(test_list1), 4)
         self.assertEqual(max_integer(test_list2), 4)
         self.assertEqual(max_integer(test_list3), 4)
@@ -25,6 +26,7 @@ class TestMaxInteger(unittest.TestCase):
         test_list1 = [-91, -31, -4, -2]
         test_list2 = [-2, -91, -31, -4]
         test_list3 = [-91, -123, -2, -31, -4]
+
         self.assertEqual(max_integer(test_list1), -2)
         self.assertEqual(max_integer(test_list2), -2)
         self.assertEqual(max_integer(test_list3), -2)
@@ -84,6 +86,7 @@ class TestMaxInteger(unittest.TestCase):
         """
         test_list1 = [2, 2, 2, 2, 2]
         test_list2 = [-55, -55, -55, -55]
+
         self.assertEqual(max_integer(test_list1), 2)
         self.assertEqual(max_integer(test_list2), -55)
 
@@ -177,8 +180,6 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer(test_list3), 6.8)
         self.assertEqual(max_integer(test_list4), -0.1)
         self.assertEqual(max_integer(test_list5), 0.1)
-
-
 
 if __name__ == '__main__':
     unittest.main()
