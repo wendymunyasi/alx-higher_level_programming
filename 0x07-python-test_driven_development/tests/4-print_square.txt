@@ -5,9 +5,6 @@ How to use 4-print_square.py
 
 This library has one function called ``print_square()``
 
-Numbers
-=======
-
 ``print_square()`` prints a square with the character #.
 
 Importing the function print_square.

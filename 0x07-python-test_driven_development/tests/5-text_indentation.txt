@@ -5,9 +5,6 @@ How to use 5-text_indentation.py
 
 This library has one function called ``text_indentation()``
 
-Numbers
-=======
-
 ``text_indentation()`` prints a text with 2 new lines after each of these
 characters: ., ? and :
 
@@ -64,3 +61,8 @@ Passing no arguments to text_indentation.
         ...
     TypeError: text_indentation() missing 1 required positional argument: 'text'
 
+Passing more than one argument to text_indentation.
+    >>> text_indentation("Hola", "Commo Estas") #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+        ...
+    TypeError: text_indentation() takes 1 positional argument but ...
