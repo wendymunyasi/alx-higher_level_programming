@@ -20,4 +20,6 @@ def lazy_matrix_mul(m_a, m_b):
     Returns:
         matrix: the product of the two matrices.
     """
+    # m_a = ([1, 2], [3, 4])
+    # m_b = [[1, 2], [3, 4]]
     return np.matmul(m_a, m_b)
