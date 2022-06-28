@@ -22,8 +22,8 @@ class Rectangle:
             height (int, optional): height of rectangle. Defaults to 0.
         """
         type(self).number_of_instances += 1
-        self.height = height
         self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -109,7 +109,7 @@ class Rectangle:
         Returns:
             Square: the new rectangle with equal values of height and width .
         """
-        return cls(size, size)
+        return Rectangle(size, size)
 
     def __str__(self):
         """Prints the rectangle with the character # .
