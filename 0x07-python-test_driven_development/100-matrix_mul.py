@@ -48,34 +48,21 @@ def matrix_mul(m_a, m_b):
         if not isinstance(element, list):
             raise TypeError(lists_err.format('m_b'))
 
-    if len(m_a) == 0 or (len(m_a) == 1 and len(m_a[0]) == 0):
+    if len(m_a) == 0 or type(m_a[0]) is list and len(m_a[0]) == 0:
         raise ValueError(empty_err.format('m_a'))
-
-    if len(m_b) == 0 or (len(m_b) == 1 and len(m_b[0]) == 0):
+    if len(m_b) == 0 or type(m_b[0]) is list and len(m_b[0]) == 0:
         raise ValueError(empty_err.format('m_b'))
-
-    for element in m_a:
-        for item in element:
-            if not type(item) in (int, float):
-                raise TypeError(type_err.format('m_a'))
-
-    for element in m_b:
-        for item in element:
-            if not type(item) in (int, float):
-                raise TypeError(type_err.format('m_b'))
-
-    len_m_a = len(m_a[0])
 
     s = -1
 
-    for x in m_a:
-        if type(x) is list:
+    for element in m_a:
+        if isinstance(element, list):
             if s == -1:
-                s = len(x)
+                s = len(element)
             else:
-                if s != len(x):
+                if s != len(element):
                     raise TypeError(size_err.format('m_a'))
-            for y in x:
+            for y in element:
                 if not isinstance(y, (int, float)):
                     raise TypeError(type_err.format('m_a'))
         else:
@@ -83,23 +70,23 @@ def matrix_mul(m_a, m_b):
 
     s = -1
 
-    for x in m_b:
-        if isinstance(x, list):
+    for element in m_b:
+        if isinstance(element, list):
             if s == -1:
-                s = len(x)
+                s = len(element)
             else:
-                if s != len(x):
+                if s != len(element):
                     raise TypeError(size_err.format('m_b'))
-            for y in x:
+            for y in element:
                 if not isinstance(y, (int, float)):
                     raise TypeError(type_err.format('m_b'))
         else:
             raise TypeError(type_err.format('m_b'))
 
-    if len_m_a != len(m_b):
+    if len(m_a[0]) != len(m_b):
         raise ValueError(value_err.format('m_a', 'm_b'))
 
-    new_matrix = [[0 for a in m_b[0]] for x in m_a]
+    new_matrix = [[0 for a in m_b[0]] for element in m_a]
     for i in range(len(m_a)):
         for n in range(len(m_b[0])):
             for k in range(len(m_b)):
