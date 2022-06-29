@@ -8,6 +8,25 @@ Attributes:
 
 
 def matrix_mul(m_a, m_b):
+    """Multiplies two matrices.
+
+    Args:
+        m_a (matrix): first matrix.
+        m_b (matrix): second matrix.
+
+    Raises:
+        TypeError: If m_a or m_b is not a list.
+        TypeError: If m_a or m_b is not a list of lists.
+        TypeError: If one element of those list of lists is not an integer
+        or a float.
+        ValueError: If m_a or m_b is empty.
+        TypeError: If m_a or m_b is not a rectangle (all ‘rows’ should be,
+        of the same size).
+        ValueError: If m_a and m_b can’t be multiplied.
+
+    Returns:
+        matrrix: Product of the two matrices.
+    """
     lists_err = "{} must be a list of lists"
     empty_err = "{} can't be empty"
     type_err = "{} should contain only integers or floats"
