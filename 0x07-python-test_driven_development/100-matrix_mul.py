@@ -48,9 +48,10 @@ def matrix_mul(m_a, m_b):
         if not isinstance(element, list):
             raise TypeError(lists_err.format('m_b'))
 
-    if len(m_a) == 0 or type(m_a[0]) is list and len(m_a[0]) == 0:
+    if len(m_a) == 0 or (len(m_a) == 1 and len(m_a[0]) == 0):
         raise ValueError(empty_err.format('m_a'))
-    if len(m_b) == 0 or type(m_b[0]) is list and len(m_b[0]) == 0:
+
+    if len(m_b) == 0 or (len(m_b) == 1 and len(m_b[0]) == 0):
         raise ValueError(empty_err.format('m_b'))
 
     for element in m_a:
@@ -64,21 +65,36 @@ def matrix_mul(m_a, m_b):
                 raise TypeError(type_err.format('m_b'))
 
     len_m_a = len(m_a[0])
-    len_m_b = len(m_b[0])
 
-    length = 0
+    s = -1
 
-    for element in m_a:
-        if length != 0 and length != len(element):
-            raise TypeError(size_err.format('m_a'))
-        length = len(element)
+    for x in m_a:
+        if type(x) is list:
+            if s == -1:
+                s = len(x)
+            else:
+                if s != len(x):
+                    raise TypeError(size_err.format('m_a'))
+            for y in x:
+                if not isinstance(y, (int, float)):
+                    raise TypeError(type_err.format('m_a'))
+        else:
+            raise TypeError(type_err.format('m_a'))
 
-    length = 0
+    s = -1
 
-    for element in m_b:
-        if length != 0 and length != len(element):
-            raise TypeError(size_err.format('m_b'))
-        length = len(element)
+    for x in m_b:
+        if isinstance(x, list):
+            if s == -1:
+                s = len(x)
+            else:
+                if s != len(x):
+                    raise TypeError(size_err.format('m_b'))
+            for y in x:
+                if not isinstance(y, (int, float)):
+                    raise TypeError(type_err.format('m_b'))
+        else:
+            raise TypeError(type_err.format('m_b'))
 
     if len_m_a != len(m_b):
         raise ValueError(value_err.format('m_a', 'm_b'))
