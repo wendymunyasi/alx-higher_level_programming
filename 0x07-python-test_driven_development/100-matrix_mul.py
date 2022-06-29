@@ -27,15 +27,18 @@ def matrix_mul(m_a, m_b):
     Returns:
         matrrix: Product of the two matrices.
     """
+    list_err = "{} must be a list"
     lists_err = "{} must be a list of lists"
     empty_err = "{} can't be empty"
     type_err = "{} should contain only integers or floats"
     size_err = "each row of {} must be of the same size"
     value_err = "{} and {} can't be multiplied"
 
-    if not isinstance(m_a, list) or not isinstance(m_b, list):
-        string = "m_a" if not isinstance(m_a, list) else "m_b"
-        raise TypeError("{} must be a list".format(string))
+    if not isinstance(m_a, list):
+        raise TypeError(list_err.format('m_a'))
+
+    if not isinstance(m_b, list):
+        raise TypeError(list_err.format('m_b'))
 
     for element in m_a:
         if not isinstance(element, list):
