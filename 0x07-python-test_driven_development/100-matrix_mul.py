@@ -27,18 +27,15 @@ def matrix_mul(m_a, m_b):
     Returns:
         matrrix: Product of the two matrices.
     """
-    list_err = "{} must be a list"
     lists_err = "{} must be a list of lists"
     empty_err = "{} can't be empty"
     type_err = "{} should contain only integers or floats"
     size_err = "each row of {} must be of the same size"
     value_err = "{} and {} can't be multiplied"
 
-    if not isinstance(m_a, list):
-        raise TypeError(list_err.format('m_a'))
-
-    if not isinstance(m_b, list):
-        raise TypeError(list_err.format('m_b'))
+    if not isinstance(m_a, list) or not isinstance(m_b, list):
+        string = "m_a" if not isinstance(m_a, list) else "m_b"
+        raise TypeError("{} must be a list".format(string))
 
     for element in m_a:
         if not isinstance(element, list):
@@ -48,45 +45,37 @@ def matrix_mul(m_a, m_b):
         if not isinstance(element, list):
             raise TypeError(lists_err.format('m_b'))
 
-    if len(m_a) == 0 or type(m_a[0]) is list and len(m_a[0]) == 0:
+    if len(m_a) == 0 or (len(m_a) == 1 and len(m_a[0]) == 0):
         raise ValueError(empty_err.format('m_a'))
-    if len(m_b) == 0 or type(m_b[0]) is list and len(m_b[0]) == 0:
+
+    if len(m_b) == 0 or (len(m_b) == 1 and len(m_b[0]) == 0):
         raise ValueError(empty_err.format('m_b'))
 
-    s = -1
-
     for element in m_a:
-        if isinstance(element, list):
-            if s == -1:
-                s = len(element)
-            else:
-                if s != len(element):
-                    raise TypeError(size_err.format('m_a'))
-            for y in element:
-                if not isinstance(y, (int, float)):
-                    raise TypeError(type_err.format('m_a'))
-        else:
-            raise TypeError(type_err.format('m_a'))
-
-    s = -1
+        for item in element:
+            if not type(item) in (int, float):
+                raise TypeError(type_err.format('m_a'))
 
     for element in m_b:
-        if isinstance(element, list):
-            if s == -1:
-                s = len(element)
-            else:
-                if s != len(element):
-                    raise TypeError(size_err.format('m_b'))
-            for y in element:
-                if not isinstance(y, (int, float)):
-                    raise TypeError(type_err.format('m_b'))
-        else:
-            raise TypeError(type_err.format('m_b'))
+        for item in element:
+            if not type(item) in (int, float):
+                raise TypeError(type_err.format('m_b'))
 
-    if len(m_a[0]) != len(m_b):
+    len_m_a = len(m_a[0])
+    len_m_b = len(m_b[0])
+
+    for element in m_a:
+        if len_m_a != len(element):
+            raise TypeError(size_err.format('m_a'))
+
+    for element in m_b:
+        if len_m_b != len(element):
+            raise TypeError(size_err.format('m_b'))
+
+    if len_m_a != len(m_b):
         raise ValueError(value_err.format('m_a', 'm_b'))
 
-    new_matrix = [[0 for a in m_b[0]] for element in m_a]
+    new_matrix = [[0 for a in m_b[0]] for x in m_a]
     for i in range(len(m_a)):
         for n in range(len(m_b[0])):
             for k in range(len(m_b)):
