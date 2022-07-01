@@ -17,6 +17,7 @@ Tel: *+254707240068.*
 *   The first line of all your files should be exactly `#!/usr/bin/python3`.
 *   Your code should use the pycodestyle (version `2.8.*`).
 *   All your files must be executable.
+*   The `main.py` files are used to test your functions, but you don’t have to push them to your repo.
 *   The length of your files will be tested using `wc`.
 *   All your modules should have a documentation (`python3 -c 'print(__import__("my_module").__doc__)'`).
 *   All your classes should have a documentation (`python3 -c 'print(__import__("my_module").MyClass.__doc__)'`).
@@ -26,7 +27,7 @@ Tel: *+254707240068.*
 
 ## Project Description
 Learn what is OOP.
-What is a class
+What is a class.
 What is an object and an instance.
 What is the difference between a class and an object or instance.
 What is an attribute.
