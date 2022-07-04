@@ -10,11 +10,15 @@ This library has one function ``print_sorted()``
 Importing the function:
     >>> MyList = __import__('1-my_list').MyList
 
-Testing if MyList is a subclass of list.
+Test if MyList is a subclass of list.
     >>> issubclass(MyList, list)
     True
 
-Testing a list of positive numbers.
+Test if 'print_sorted' is an attribute of class MyList
+    >>> 'print_sorted' in dir(MyList)
+    True
+
+Test a list of positive numbers.
     >>> my_list = MyList()
     >>> my_list.append(1)
     >>> my_list.append(4)
@@ -24,7 +28,7 @@ Testing a list of positive numbers.
     >>> my_list.print_sorted()
     [1, 2, 3, 4, 5]
 
-Testing a list of negative numbers.
+Test a list of negative numbers.
     >>> my_list = MyList()
     >>> my_list.append(-1)
     >>> my_list.append(-4)
@@ -34,7 +38,7 @@ Testing a list of negative numbers.
     >>> my_list.print_sorted()
     [-5, -4, -3, -2, -1]
 
-Testing a list of positive and negative numbers.
+Test a list of positive and negative numbers.
     >>> my_list = MyList()
     >>> my_list.append(1)
     >>> my_list.append(4)
@@ -44,13 +48,13 @@ Testing a list of positive and negative numbers.
     >>> my_list.print_sorted()
     [-5, -2, 1, 3, 4]
 
-Testing a list containing only one number.
+Test a list containing only one number.
     >>> my_list = MyList()
     >>> my_list.append(8)
     >>> my_list.print_sorted()
     [8]
 
-Testing a list of positive string numbers.
+Test a list of positive string numbers.
     >>> my_list = MyList()
     >>> my_list.append("1")
     >>> my_list.append("4")
@@ -60,7 +64,7 @@ Testing a list of positive string numbers.
     >>> my_list.print_sorted()
     ['1', '2', '3', '4', '5']
 
-Testing a list of negative string numbers.
+Test a list of negative string numbers.
     >>> my_list = MyList()
     >>> my_list.append("-1")
     >>> my_list.append("-4")
@@ -70,7 +74,7 @@ Testing a list of negative string numbers.
     >>> my_list.print_sorted()
     ['-1', '-2', '-3', '-4', '-5']
 
-Testing a list of positive and negative string numbers.
+Test a list of positive and negative string numbers.
     >>> my_list = MyList()
     >>> my_list.append("-1")
     >>> my_list.append("4")
@@ -80,7 +84,7 @@ Testing a list of positive and negative string numbers.
     >>> my_list.print_sorted()
     ['-1', '-2', '-5', '3', '4']
 
-Testing a list of positive characters.
+Test a list of positive characters.
     >>> my_list = MyList()
     >>> my_list.append('j')
     >>> my_list.append('c')
@@ -90,7 +94,7 @@ Testing a list of positive characters.
     >>> my_list.print_sorted()
     ['a', 'c', 'g', 'j', 'z']
 
-Testing a list of negative characters.
+Test a list of negative characters.
     >>> my_list = MyList()
     >>> my_list.append('-j')
     >>> my_list.append('-c')
@@ -100,7 +104,7 @@ Testing a list of negative characters.
     >>> my_list.print_sorted()
     ['-a', '-c', '-g', '-j', '-z']
 
-Testing a list of positive and negative characters.
+Test a list of positive and negative characters.
     >>> my_list = MyList()
     >>> my_list.append('j')
     >>> my_list.append('-c')
@@ -110,7 +114,7 @@ Testing a list of positive and negative characters.
     >>> my_list.print_sorted()
     ['-a', '-c', '-g', 'j', 'z']
 
-Testing an empty list.
+Test an empty list.
     >>> my_list = MyList()
     >>> my_list.print_sorted()
     []
