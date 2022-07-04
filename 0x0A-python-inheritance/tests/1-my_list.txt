@@ -69,6 +69,11 @@ Test a list containing only one number.
     >>> my_list.print_sorted()
     [8]
 
+    >>> my_list = MyList()
+    >>> my_list += [3]
+    >>> my_list.print_sorted()
+    [3]
+
 Test a list of positive string numbers.
     >>> my_list = MyList()
     >>> my_list.append("1")
