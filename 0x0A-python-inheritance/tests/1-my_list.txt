@@ -15,6 +15,9 @@ Test if MyList is a subclass and/or instance of list.
     >>> issubclass(MyList, list)
     True
 
+    >>> isinstance(my_list, list)
+    True
+
 Test if 'print_sorted' is an attribute of class MyList.
     >>> my_list = MyList()
     >>> 'print_sorted' in dir(MyList)
