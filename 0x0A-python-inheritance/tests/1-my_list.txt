@@ -1,0 +1,125 @@
+# The ``1-my_list.py`` module
+============================================
+How to use 1-my_list.py
+============================================
+
+This library has one function ``print_sorted()``
+
+``print_sorted`` returns a list of integers sorted in ascending order.
+
+Importing the function:
+    >>> MyList = __import__('1-my_list').MyList
+
+Testing a list of positive numbers.
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+
+Testing a list of negative numbers.
+    >>> my_list = MyList()
+    >>> my_list.append(-1)
+    >>> my_list.append(-4)
+    >>> my_list.append(-2)
+    >>> my_list.append(-3)
+    >>> my_list.append(-5)
+    >>> my_list.print_sorted()
+    [-5, -4, -3, -2, -1]
+
+Testing a list of positive and negative numbers.
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(-2)
+    >>> my_list.append(3)
+    >>> my_list.append(-5)
+    >>> my_list.print_sorted()
+    [-5, -2, 1, 3, 4]
+
+Testing a list containing only one number.
+    >>> my_list = MyList()
+    >>> my_list.append(8)
+    >>> my_list.print_sorted()
+    [8]
+
+Testing a list of positive string numbers.
+    >>> my_list = MyList()
+    >>> my_list.append("1")
+    >>> my_list.append("4")
+    >>> my_list.append("2")
+    >>> my_list.append("3")
+    >>> my_list.append("5")
+    >>> my_list.print_sorted()
+    ['1', '2', '3', '4', '5']
+
+Testing a list of negative string numbers.
+    >>> my_list = MyList()
+    >>> my_list.append("-1")
+    >>> my_list.append("-4")
+    >>> my_list.append("-2")
+    >>> my_list.append("-3")
+    >>> my_list.append("-5")
+    >>> my_list.print_sorted()
+    ['-1', '-2', '-3', '-4', '-5']
+
+Testing a list of positive and negative string numbers.
+    >>> my_list = MyList()
+    >>> my_list.append("-1")
+    >>> my_list.append("4")
+    >>> my_list.append("-2")
+    >>> my_list.append("3")
+    >>> my_list.append("-5")
+    >>> my_list.print_sorted()
+    ['-1', '-2', '-5', '3', '4']
+
+Testing a list of positive characters.
+    >>> my_list = MyList()
+    >>> my_list.append('j')
+    >>> my_list.append('c')
+    >>> my_list.append('z')
+    >>> my_list.append('g')
+    >>> my_list.append('a')
+    >>> my_list.print_sorted()
+    ['a', 'c', 'g', 'j', 'z']
+
+Testing a list of negative characters.
+    >>> my_list = MyList()
+    >>> my_list.append('-j')
+    >>> my_list.append('-c')
+    >>> my_list.append('-z')
+    >>> my_list.append('-g')
+    >>> my_list.append('-a')
+    >>> my_list.print_sorted()
+    ['-a', '-c', '-g', '-j', '-z']
+
+Testing a list of positive and negative characters.
+    >>> my_list = MyList()
+    >>> my_list.append('j')
+    >>> my_list.append('-c')
+    >>> my_list.append('z')
+    >>> my_list.append('-g')
+    >>> my_list.append('-a')
+    >>> my_list.print_sorted()
+    ['-a', '-c', '-g', 'j', 'z']
+
+Testing an empty list.
+    >>> my_list = MyList()
+    >>> my_list.print_sorted()
+    []
+
+Passing more than one argument to sort method.
+    >>> my_list = MyList()
+    >>> my_list.print_sorted([1, 2])
+    Traceback (most recent call last):
+    	...
+    TypeError: print_sorted() takes 1 positional argument but 2 were given
+
+    >>> my_list = MyList()
+    >>> my_list.print_sorted([1, 2], [3, 4])
+    Traceback (most recent call last):
+    	...
+    TypeError: print_sorted() takes 1 positional argument but 3 were given
