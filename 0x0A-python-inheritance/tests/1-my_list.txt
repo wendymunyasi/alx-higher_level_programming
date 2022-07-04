@@ -10,6 +10,10 @@ This library has one function ``print_sorted()``
 Importing the function:
     >>> MyList = __import__('1-my_list').MyList
 
+Testing if MyList is a subclass of list.
+    >>> issubclass(MyList, list)
+    True
+
 Testing a list of positive numbers.
     >>> my_list = MyList()
     >>> my_list.append(1)
