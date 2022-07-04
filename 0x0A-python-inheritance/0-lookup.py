@@ -12,6 +12,4 @@ def lookup(obj):
     Returns:
         list: list of available attributes and methods of an object
     """
-    method_list = [func for func in dir(obj) if callable(getattr(obj, func))]
-    return method_list
-    # return dir(obj)
+    return dir(obj)
