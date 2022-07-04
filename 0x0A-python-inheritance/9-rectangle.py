@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines a class Rectangle based on 7-base_geometry.py.
+"""Defines a class Rectangle based on 8-base_geometry.py.
 
 Attributes:
     width (int): width of the rectangle.
