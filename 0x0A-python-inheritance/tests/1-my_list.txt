@@ -10,11 +10,13 @@ This library has one function ``print_sorted()``
 Importing the function:
     >>> MyList = __import__('1-my_list').MyList
 
-Test if MyList is a subclass of list.
+Test if MyList is a subclass and/or instance of list.
+    >>> my_list = MyList()
     >>> issubclass(MyList, list)
     True
 
-Test if 'print_sorted' is an attribute of class MyList
+Test if 'print_sorted' is an attribute of class MyList.
+    >>> my_list = MyList()
     >>> 'print_sorted' in dir(MyList)
     True
 
