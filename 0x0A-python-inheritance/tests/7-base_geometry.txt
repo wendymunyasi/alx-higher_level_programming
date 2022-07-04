@@ -62,3 +62,13 @@ Test for passing no arguments to integer_validator.
     Traceback (most recent call last):
         ...
     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Test for passing a boolean value.
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", True)
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", False)
+    Traceback (most recent call last):
+    	...
+    ValueError: name must be greater than 0
