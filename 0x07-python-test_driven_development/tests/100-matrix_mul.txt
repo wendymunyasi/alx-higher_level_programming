@@ -44,6 +44,21 @@ Passing a non-list in any element of matrix_divided
         ...
     TypeError: m_a must be a list of lists
 
+Passing a non-list in any element of matrix_divided
+    >>> m_a = [[1, 2], [3, 4]]
+    >>> m_b = [1, 2, 3, 4]
+    >>> matrix_mul(m_a, m_b)
+    Traceback (most recent call last):
+        ...
+    TypeError: m_b must be a list of lists
+
+    >>> m_a = [[1, 2], [3, 4]]
+    >>> m_b = [["1", "2"], ["3", "4"]]
+    >>> matrix_mul(m_a, m_b)
+    Traceback (most recent call last):
+        ...
+    TypeError: m_b should contain only integers or floats
+
 Passing an empty matrix.
     >>> m_a = []
     >>> m_b = [[1, 2], [3, 4]]
@@ -92,6 +107,13 @@ Passing a matrix which its rows have different size.
     Traceback (most recent call last):
         ...
     TypeError: each row of m_b must be of the same size
+
+    >>> m_a = [[1, 2], [3, 4, 5]]
+    >>> m_b = [[1, 2], [3, 4]]
+    >>> matrix_mul(m_a, m_b)
+    Traceback (most recent call last):
+        ...
+    TypeError: each row of m_a must be of the same size
 
 Passing mismatched matrices.
     >>> m_a = [[1, 2, 3], [4, 5, 6]]
