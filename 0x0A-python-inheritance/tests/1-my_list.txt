@@ -33,6 +33,16 @@ Test a list of positive numbers.
     >>> my_list.print_sorted()
     [1, 2, 3, 4, 5]
 
+Test a list of repeated numbers.
+    >>> my_list = MyList()
+    >>> my_list.append(3)
+    >>> my_list += [3]
+    >>> my_list.append(4)
+    >>> my_list.append(4)
+    >>> my_list += [4]
+    >>> my_list.print_sorted()
+    [3, 3, 4, 4, 4]
+
 Test a list of negative numbers.
     >>> my_list = MyList()
     >>> my_list.append(-1)
