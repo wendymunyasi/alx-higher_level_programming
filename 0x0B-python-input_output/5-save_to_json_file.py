@@ -22,6 +22,5 @@ def save_to_json_file(my_obj, filename):
     # writing to file
     with open(filename, 'w', encoding="utf-8") as f:
 
-        # print("type f.write(json_object) --> {}".format(type(f.write(json_object))))
         # or json.dump(my_obj, f)
         return f.write(json_object)
