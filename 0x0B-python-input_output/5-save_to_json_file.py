@@ -14,7 +14,7 @@ def save_to_json_file(my_obj, filename):
         type: JSON representation.
     """
     # serializing json
-    json_object = json.dumps(my_obj)
+    json_object = json.dump(my_obj)
 
     # print("type of json_object --> {}".format(type(json_object)))
     # print("type of my_obj --> {}".format(type(my_obj)))
