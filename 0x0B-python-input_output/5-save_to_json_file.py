@@ -24,3 +24,4 @@ def save_to_json_file(my_obj, filename):
 
         # or json.dump(my_obj, f)
         f.write(json_object)
+        f.close()
