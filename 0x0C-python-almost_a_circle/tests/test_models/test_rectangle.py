@@ -17,7 +17,7 @@ class TestRectangleMethods(unittest.TestCase):
     def setUp(self):
         """ Runs for each test """
         Base._Base__nb_objects = 0
-        
+
     def tearDown(self):
         """ Cleans up after each test """
         pass
@@ -42,7 +42,7 @@ class TestRectangleMethods(unittest.TestCase):
         with self.assertRaises(TypeError):
             Rectangle(20)
             Rectangle()
-            
+
     def test_constructor_no_args(self):
         """ Test constructor with no argument"""
         with self.assertRaises(TypeError) as e:
@@ -50,9 +50,9 @@ class TestRectangleMethods(unittest.TestCase):
         s = "__init__() missing 2 required positional arguments: 'width' \
 and 'height'"
         self.assertEqual(str(e.exception), s)
-        
+
     def test_constructor_one_arg(self):
-        """ Test constructor with one argument """ 
+        """ Test constructor with one argument """
         with self.assertRaises(TypeError) as e:
             r = Rectangle(1)
         s = "__init__() missing 1 required positional argument: 'height'"
@@ -100,9 +100,9 @@ and 'height'"
         self.assertEqual(r1.area(), 2 * 3)
         self.assertEqual(r2.area(), 2 * 10)
         self.assertEqual(r3.area(), 8 * 7)
-        
+
     def test_area_no_args(self):
-        """ Test area method with no arguments """ 
+        """ Test area method with no arguments """
         r = Rectangle(5, 6)
         with self.assertRaises(TypeError) as e:
             Rectangle.area()
@@ -116,9 +116,9 @@ and 'height'"
         with patch('sys.stdout', new=StringIO()) as str_out:
             r1.display()
             self.assertEqual(str_out.getvalue(), result)
-               
+
     def test_display_no_args(self):
-        """ Test display method with no arguments """ 
+        """ Test display method with no arguments """
         r = Rectangle(9, 8)
         with self.assertRaises(TypeError) as e:
             Rectangle.display()
@@ -149,7 +149,7 @@ and 'height'"
         with patch('sys.stdout', new=StringIO()) as str_out:
             print(r1)
             self.assertEqual(str_out.getvalue(), result)
-            
+
     def test_str_no_args(self):
         """ Test __str__ return value with no arguments """
         r = Rectangle(5, 2)
