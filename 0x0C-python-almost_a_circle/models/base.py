@@ -2,6 +2,7 @@
 """Defines a class Base"""
 import json
 import os.path
+import csv
 
 
 class Base:
@@ -134,3 +135,47 @@ class Base:
             list_ins.append(cls.create(**list_cls[index]))
 
         return list_ins
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Serializes a list of rectangles or squares in csv.
+
+        Args:
+            cls (any): class.
+            list_objs (list): objects.
+        """
+        filename = cls.__name__ + ".csv"
+        with open(filename, 'w', newline="") as f:
+            writer = csv.writer(f)
+            if cls.__name__ == "Rectangle":
+                for elm in list_objs:
+                    writer.writerow([elm.id, elm.width, elm.height, elm.x, elm.y])
+            elif cls.__name__ == "Square":
+                for elm in list_objs:
+                    writer.writerow([elm.id, elm.size, elm.x, elm.y])
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """deserializes a list of rectangles or squares in csv.
+
+        Args:
+            cls (any): class.
+        """
+        filename = cls.__name__ + ".csv"
+        my_obj = []
+        try:
+            with open(filename, 'r') as f:
+                csv_reader = csv.reader(f)
+                for elm in csv_reader:
+                    if cls.__name__ == "Rectangle":
+                        dictionary = {"id": int(elm[0]), "width": int(elm[1]),
+                                      "height": int(elm[2]), "x": int(elm[3]),
+                                      "y": int(elm[4])}
+                    elif cls.__name__ == "Square":
+                        dictionary = {"id": int(elm[0]), "size": int(elm[1]),
+                                      "x": int(elm[2]), "y": int(elm[3])}
+                    obj = cls.create(**dictionary)
+                    my_obj.append(obj)
+        except(Exception):
+            pass
+        return(my_obj)
