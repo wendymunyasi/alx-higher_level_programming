@@ -37,6 +37,15 @@ class TestRectangleMethods(unittest.TestCase):
         self.assertEqual(r3.id, 12)
         self.assertEqual(r4.id, 3)
 
+    def test_class(self):
+        """ Test Rectangle class type """
+        self.assertEqual(str(Rectangle),
+                         "<class 'models.rectangle.Rectangle'>")
+
+    def test_class_inheritance(self):
+        """ Test if Rectangle inherits from Base """
+        self.assertTrue(issubclass(Rectangle, Base))
+
     def test_arg_passed(self):
         """ Test for passing one or no argument """
         with self.assertRaises(TypeError):
