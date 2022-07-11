@@ -4,6 +4,7 @@
 
 import json
 import unittest
+import os
 from models.base import Base
 from models.rectangle import Rectangle
 
@@ -101,3 +102,12 @@ class TestBaseMethods(unittest.TestCase):
         Rectangle.save_to_file(s2f)
         rf = Rectangle.load_from_file()
         self.assertNotEqual(s2f, rf)
+
+    def test_load_from_file_empty_file(self):
+        """ Test use of load_from_file with empty file """
+        try:
+            os.remove("Rectangle.json")
+        except Exception:
+            pass
+        open("Rectangle.json", 'a').close()
+        self.assertEqual(Rectangle.load_from_file(), [])
