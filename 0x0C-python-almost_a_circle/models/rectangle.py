@@ -186,11 +186,10 @@ class Rectangle(Base):
         Returns:
             dict: rectangle.
         """
-        dict1 = self.__dict__
-        dict2 = {}
-        dict2['id'] = dict1['id']
-        dict2['size'] = dict1['_Rectangle__width']
-        dict2['x'] = dict1['_Rectangle__x']
-        dict2['y'] = dict1['_Rectangle__y']
-
-        return dict2
+        dict = {}
+        dict["id"] = self.id
+        dict["width"] = self.width
+        dict["height"] = self.height
+        dict["x"] = self.x
+        dict["y"] = self.y
+        return (dict)
