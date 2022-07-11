@@ -57,7 +57,7 @@ class Square(Rectangle):
         if value <= 0:
             raise ValueError("width must be an integer")
         self.width = value
-        
+
     def update(self, *args, **kwargs):
         """Assigns an argument to each attribute
 
