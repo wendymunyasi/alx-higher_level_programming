@@ -17,6 +17,10 @@ class TestRectangleMethods(unittest.TestCase):
     def setUp(self):
         """ Runs for each test """
         Base._Base__nb_objects = 0
+        
+    def tearDown(self):
+        """ Cleans up after each test """
+        pass
 
     def test_docstring(self):
         """ Test if docstring is present """
@@ -38,6 +42,21 @@ class TestRectangleMethods(unittest.TestCase):
         with self.assertRaises(TypeError):
             Rectangle(20)
             Rectangle()
+            
+    def test_constructor_no_args(self):
+        """ Test constructor with no argument"""
+        with self.assertRaises(TypeError) as e:
+            r = Rectangle()
+        s = "__init__() missing 2 required positional arguments: 'width' \
+and 'height'"
+        self.assertEqual(str(e.exception), s)
+        
+    def test_constructor_one_arg(self):
+        """ Test constructor with one argument """ 
+        with self.assertRaises(TypeError) as e:
+            r = Rectangle(1)
+        s = "__init__() missing 1 required positional argument: 'height'"
+        self.assertEqual(str(e.exception), s)
 
     def test_width_height_1(self):
         """ Test for width and height types"""
@@ -81,6 +100,14 @@ class TestRectangleMethods(unittest.TestCase):
         self.assertEqual(r1.area(), 2 * 3)
         self.assertEqual(r2.area(), 2 * 10)
         self.assertEqual(r3.area(), 8 * 7)
+        
+    def test_area_no_args(self):
+        """ Test area method with no arguments """ 
+        r = Rectangle(5, 6)
+        with self.assertRaises(TypeError) as e:
+            Rectangle.area()
+        s = "area() missing 1 required positional argument: 'self'"
+        self.assertEqual(str(e.exception), s)
 
     def test_basic_display(self):
         """ Test display without x and y """
@@ -89,6 +116,14 @@ class TestRectangleMethods(unittest.TestCase):
         with patch('sys.stdout', new=StringIO()) as str_out:
             r1.display()
             self.assertEqual(str_out.getvalue(), result)
+               
+    def test_display_no_args(self):
+        """ Test display method with no arguments """ 
+        r = Rectangle(9, 8)
+        with self.assertRaises(TypeError) as e:
+            Rectangle.display()
+        s = "display() missing 1 required positional argument: 'self'"
+        self.assertEqual(str(e.exception), s)
 
     def test_complex_display(self):
         """ Test display """
@@ -114,6 +149,14 @@ class TestRectangleMethods(unittest.TestCase):
         with patch('sys.stdout', new=StringIO()) as str_out:
             print(r1)
             self.assertEqual(str_out.getvalue(), result)
+            
+    def test_str_no_args(self):
+        """ Test __str__ return value with no arguments """
+        r = Rectangle(5, 2)
+        with self.assertRaises(TypeError) as e:
+            Rectangle.__str__()
+        s = "__str__() missing 1 required positional argument: 'self'"
+        self.assertEqual(str(e.exception), s)
 
     def test_update_args(self):
         """ Test the udpate method with *args """
