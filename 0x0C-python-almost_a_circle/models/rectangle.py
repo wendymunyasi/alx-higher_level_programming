@@ -14,6 +14,7 @@ class Rectangle(Base):
         x (int): x.
         y (int): y.
     """
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """Creates new instances of rectangle.
 
@@ -133,10 +134,24 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
-        
+
     def area(self):
         """Calculates area of a rectangle.
+
         Returns:
             int: area.
         """
         return self.__height * self.__width
+
+    def display(self):
+        """Prints in stdout the Rectangle instance with the character #."""
+        if self.__y > 0:
+            for i in range(self.__y):
+                print()
+            self.__y = 0
+        for i in range(self.__height):
+            for j in range(self.__width):
+                if self.__y == j:
+                    print(" " * self.__x, end="")
+                print("#", end="")
+            print()
