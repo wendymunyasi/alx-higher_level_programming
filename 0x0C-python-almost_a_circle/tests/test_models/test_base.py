@@ -111,3 +111,6 @@ class TestBaseMethods(unittest.TestCase):
             pass
         open("Rectangle.json", 'a').close()
         self.assertEqual(Rectangle.load_from_file(), [])
+
+if __name__ == "__main__":
+    unittest.main()
