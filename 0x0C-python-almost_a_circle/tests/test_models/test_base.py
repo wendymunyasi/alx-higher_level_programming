@@ -7,6 +7,7 @@ import unittest
 import os
 from models.base import Base
 from models.rectangle import Rectangle
+from models.square import Square
 
 
 class TestBaseMethods(unittest.TestCase):
@@ -16,6 +17,10 @@ class TestBaseMethods(unittest.TestCase):
         """ Runs for each test """
         Base._Base__nb_objects = 0
         self.new_base = Base(id=1)
+
+    def tearDown(self):
+        """ Cleans up after each test """
+        pass
 
     def test_check_instance_variables(self):
         """ Checks instance variables """
@@ -36,6 +41,12 @@ class TestBaseMethods(unittest.TestCase):
         test4 = Base(-24)
         self.assertEqual(test4.id, -24)
 
+    def test_consecutive_ids(self):
+        """ Tests consecutive ids """
+        b1 = Base()
+        b2 = Base()
+        self.assertEqual(b1.id + 1, b2.id)
+
     def test_0_id(self):
         """ Test id to see if it duplicates """
         Base._Base__nb_objects = 0
@@ -49,6 +60,21 @@ class TestBaseMethods(unittest.TestCase):
         self.assertEqual(b3.id, 3)
         self.assertEqual(b4.id, 12)
         self.assertEqual(b5.id, 4)
+
+    def test_constructor(self):
+        """ Tests constructor signature """
+        with self.assertRaises(TypeError) as e:
+            Base.__init__()
+        msg = "__init__() missing 1 required positional argument: 'self'"
+        self.assertEqual(str(e.exception), msg)
+
+    def test_constructor_args_2(self):
+        """ Tests constructor signature with 2 notself args """
+        with self.assertRaises(TypeError) as e:
+            Base.__init__(self, 1, 2)
+        msg = "__init__() takes from 1 to 2 positional arguments but 3 \
+were given"
+        self.assertEqual(str(e.exception), msg)
 
     def test_to_json_string(self):
         """ Test to_json_string method """
@@ -103,6 +129,72 @@ class TestBaseMethods(unittest.TestCase):
         rf = Rectangle.load_from_file()
         self.assertNotEqual(s2f, rf)
 
+    def test_save_to_file_4(self):
+        """ Test save_to_file method """
+        import os
+        r1 = Rectangle(10, 7, 2, 8)
+        r2 = Rectangle(2, 4)
+        Rectangle.save_to_file([r1, r2])
+
+        with open("Rectangle.json", "r") as file:
+            self.assertEqual(len(file.read()), 105)
+
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", "r") as file:
+            self.assertEqual(file.read(), "[]")
+
+        try:
+            os.remove("Rectangle.json")
+        except:
+            pass
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as file:
+            self.assertEqual(file.read(), "[]")
+
+        r2 = Rectangle(2, 4)
+        Rectangle.save_to_file([r2])
+        with open("Rectangle.json", "r") as file:
+            self.assertEqual(len(file.read()), 52)
+
+        Square.save_to_file(None)
+        with open("Square.json", "r") as file:
+            self.assertEqual(file.read(), "[]")
+
+        try:
+            os.remove("Square.json")
+        except:
+            pass
+        Square.save_to_file([])
+        with open("Square.json", "r") as file:
+            self.assertEqual(file.read(), "[]")
+
+        r2 = Square(1)
+        Square.save_to_file([r2])
+        with open("Square.json", "r") as file:
+            self.assertEqual(len(file.read()), 38)
+
+    def test_load_from_file(self):
+        """Test load_from_file method """
+        r1 = Rectangle(10, 7, 2, 8)
+        r2 = Rectangle(2, 4)
+        list_in = [r1, r2]
+        Rectangle.save_to_file(list_in)
+        list_out = Rectangle.load_from_file()
+        self.assertNotEqual(id(list_in[0]), id(list_out[0]))
+        self.assertEqual(str(list_in[0]), str(list_out[0]))
+        self.assertNotEqual(id(list_in[1]), id(list_out[1]))
+        self.assertEqual(str(list_in[1]), str(list_out[1]))
+
+        s1 = Square(5)
+        s2 = Square(7, 9, 1)
+        list_in = [s1, s2]
+        Square.save_to_file(list_in)
+        list_out = Square.load_from_file()
+        self.assertNotEqual(id(list_in[0]), id(list_out[0]))
+        self.assertEqual(str(list_in[0]), str(list_out[0]))
+        self.assertNotEqual(id(list_in[1]), id(list_out[1]))
+        self.assertEqual(str(list_in[1]), str(list_out[1]))
+
     def test_load_from_file_empty_file(self):
         """ Test use of load_from_file with empty file """
         try:
@@ -112,5 +204,12 @@ class TestBaseMethods(unittest.TestCase):
         open("Rectangle.json", 'a').close()
         self.assertEqual(Rectangle.load_from_file(), [])
 
-if __name__ == "__main__":
-    unittest.main()
+    def test_create(self):
+        """ Test create method """
+        r1 = Rectangle(3, 5, 1)
+        r1_dictionary = r1.to_dictionary()
+        r2 = Rectangle.create(**r1_dictionary)
+        self.assertEqual(str(r1), str(r2))
+        self.assertFalse(r1 is r2)
+        self.assertFalse(r1 == r2)
+
