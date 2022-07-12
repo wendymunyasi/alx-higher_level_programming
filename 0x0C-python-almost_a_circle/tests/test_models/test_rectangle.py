@@ -199,25 +199,6 @@ and 'height'"
             print(r1)
             self.assertEqual(str_out.getvalue(), result)
 
-    def test_str_2(self):
-        """ Test __str __ """
-        r = Rectangle(5, 2)
-        s = '[Rectangle] (1) 0/0 - 5/2'
-        self.assertEqual(str(r), s)
-        r = Rectangle(1, 1, 1)
-        s = '[Rectangle] (2) 1/0 - 1/1'
-        self.assertEqual(str(r), s)
-        r = Rectangle(3, 4, 5, 6)
-        s = '[Rectangle] (3) 5/6 - 3/4'
-        self.assertEqual(str(r), s)
-
-        Base._Base__nb_objects = 0
-        r1 = Rectangle(4, 6, 2, 1, 12)
-        self.assertEqual(str(r1), "[Rectangle] (12) 2/1 - 4/6")
-
-        r2 = Rectangle(5, 5, 1)
-        self.assertEqual(str(r2), "[Rectangle] (1) 1/0 - 5/5")
-
     def test_str_no_args(self):
         """ Test __str__ return value with no arguments """
         r = Rectangle(5, 2)
