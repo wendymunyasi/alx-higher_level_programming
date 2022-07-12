@@ -37,25 +37,6 @@ class TestSquareMethods(unittest.TestCase):
         self.assertEqual(s2.y, 3)
         self.assertEqual(s2.id, 4)
 
-    def test_attributes_1(self):
-        """ Test for width and x and y types"""
-        with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Square("1")
-        with self.assertRaisesRegex(TypeError, "x must be an integer"):
-            Square(1, "2")
-        with self.assertRaisesRegex(TypeError, "y must be an integer"):
-            Square(1, 2, "3")
-
-    def test_attributes_2(self):
-        """ Test for width and height ranges"""
-        with self.assertRaisesRegex(ValueError, "width must be > 0"):
-            Square(-1)
-            Square(0)
-        with self.assertRaisesRegex(ValueError, "x must be >= 0"):
-            Square(1, -2)
-        with self.assertRaisesRegex(ValueError, "y must be >= 0"):
-            Square(1, 2, -3)
-
     def test_constructor_no_args(self):
         """ Tests constructor with no args """
         with self.assertRaises(TypeError) as e:
