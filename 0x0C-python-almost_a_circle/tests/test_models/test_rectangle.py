@@ -100,11 +100,9 @@ and 'height'"
         with self.assertRaisesRegex(ValueError, "x must be >= 0"):
             Rectangle(5, 4, -2)
             Rectangle(13, 2, 0)
-            Rectangle(1, 2, -3)
         with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             Rectangle(7, 6, 5, -5)
             Rectangle(4, 2, 1, 0)
-            Rectangle(1, 2, 3, -4)
 
     def test_area_1(self):
         """ Test area """
