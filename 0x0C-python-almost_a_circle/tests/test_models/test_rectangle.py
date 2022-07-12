@@ -138,34 +138,6 @@ and 'height'"
             r1.display()
             self.assertEqual(str_out.getvalue(), result)
 
-    def test_basic_display_2(self):
-        """ Test string printed """
-        r1 = Rectangle(5, 4, 1, 1)
-        result = "\n #####\n #####\n #####\n #####\n"
-        with patch('sys.stdout', new=StringIO()) as str_out:
-            r1.display()
-            self.assertEqual(str_out.getvalue(), result)
-
-    def test_display_4(self):
-        """ Test string printed """
-        r1 = Rectangle(3, 2)
-        result = "###\n###\n"
-        with patch('sys.stdout', new=StringIO()) as str_out:
-            r1.display()
-            self.assertEqual(str_out.getvalue(), result)
-
-        r1.x = 4
-        result = "    ###\n    ###\n"
-        with patch('sys.stdout', new=StringIO()) as str_out:
-            r1.display()
-            self.assertEqual(str_out.getvalue(), result)
-
-        r1.y = 2
-        result = "\n\n    ###\n    ###\n"
-        with patch('sys.stdout', new=StringIO()) as str_out:
-            r1.display()
-            self.assertEqual(str_out.getvalue(), result)
-
     def test_display_no_args(self):
         """ Test display method with no arguments """
         r = Rectangle(9, 8)
