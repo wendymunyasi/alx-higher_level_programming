@@ -91,15 +91,20 @@ and 'height'"
         with self.assertRaisesRegex(ValueError, "width must be > 0"):
             Rectangle(-7, 2)
             Rectangle(0, 1)
+            Rectangle(0, 2)
         with self.assertRaisesRegex(ValueError, "height must be > 0"):
             Rectangle(6, -5)
             Rectangle(2, 0)
+            Rectangle(1, 0)
+
         with self.assertRaisesRegex(ValueError, "x must be >= 0"):
             Rectangle(5, 4, -2)
             Rectangle(13, 2, 0)
+            Rectangle(1, 2, -3)
         with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             Rectangle(7, 6, 5, -5)
             Rectangle(4, 2, 1, 0)
+            Rectangle(1, 2, 3, -4)
 
     def test_area_1(self):
         """ Test area """
@@ -109,6 +114,15 @@ and 'height'"
         self.assertEqual(r1.area(), 2 * 3)
         self.assertEqual(r2.area(), 2 * 10)
         self.assertEqual(r3.area(), 8 * 7)
+
+    def test_area_2(self):
+        """ Checking the return value of area method """
+        r1 = Rectangle(2, 2)
+        self.assertEqual(r1.area(), 4)
+        r1.width = 5
+        self.assertEqual(r1.area(), 10)
+        r1.height = 5
+        self.assertEqual(r1.area(), 25)
 
     def test_area_no_args(self):
         """ Test area method with no arguments """
@@ -122,6 +136,34 @@ and 'height'"
         """ Test display without x and y """
         r1 = Rectangle(4, 6)
         result = "####\n####\n####\n####\n####\n####\n"
+        with patch('sys.stdout', new=StringIO()) as str_out:
+            r1.display()
+            self.assertEqual(str_out.getvalue(), result)
+
+    def test_basic_display_2(self):
+        """ Test string printed """
+        r1 = Rectangle(5, 4, 1, 1)
+        result = "\n #####\n #####\n #####\n #####\n"
+        with patch('sys.stdout', new=StringIO()) as str_out:
+            r1.display()
+            self.assertEqual(str_out.getvalue(), result)
+
+    def test_display_4(self):
+        """ Test string printed """
+        r1 = Rectangle(3, 2)
+        result = "###\n###\n"
+        with patch('sys.stdout', new=StringIO()) as str_out:
+            r1.display()
+            self.assertEqual(str_out.getvalue(), result)
+
+        r1.x = 4
+        result = "    ###\n    ###\n"
+        with patch('sys.stdout', new=StringIO()) as str_out:
+            r1.display()
+            self.assertEqual(str_out.getvalue(), result)
+
+        r1.y = 2
+        result = "\n\n    ###\n    ###\n"
         with patch('sys.stdout', new=StringIO()) as str_out:
             r1.display()
             self.assertEqual(str_out.getvalue(), result)
@@ -158,6 +200,25 @@ and 'height'"
         with patch('sys.stdout', new=StringIO()) as str_out:
             print(r1)
             self.assertEqual(str_out.getvalue(), result)
+
+    def test_str_2(self):
+        """ Test __str __ """
+        r = Rectangle(5, 2)
+        s = '[Rectangle] (1) 0/0 - 5/2'
+        self.assertEqual(str(r), s)
+        r = Rectangle(1, 1, 1)
+        s = '[Rectangle] (2) 1/0 - 1/1'
+        self.assertEqual(str(r), s)
+        r = Rectangle(3, 4, 5, 6)
+        s = '[Rectangle] (3) 5/6 - 3/4'
+        self.assertEqual(str(r), s)
+
+        Base._Base__nb_objects = 0
+        r1 = Rectangle(4, 6, 2, 1, 12)
+        self.assertEqual(str(r1), "[Rectangle] (12) 2/1 - 4/6")
+
+        r2 = Rectangle(5, 5, 1)
+        self.assertEqual(str(r2), "[Rectangle] (1) 1/0 - 5/5")
 
     def test_str_no_args(self):
         """ Test __str__ return value with no arguments """

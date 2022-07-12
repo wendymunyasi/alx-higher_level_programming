@@ -4,14 +4,14 @@ from models.square import Square
 
 if __name__ == "__main__":
 
-    s1 = Square(5)
+    s1 = Square(0)
     print(s1)
     print(s1.area())
     s1.display()
 
     print("---")
 
-    s2 = Square(2, 2)
+    s2 = Square(1, 2, 3, 4)
     print(s2)
     print(s2.area())
     s2.display()
@@ -22,3 +22,10 @@ if __name__ == "__main__":
     print(s3)
     print(s3.area())
     s3.display()
+
+    s3 = Square(2, 2)
+    print(s3)
+    print(s3.area())
+    s3.display()
+
+    print("---")

@@ -147,7 +147,7 @@ class Rectangle(Base):
         Returns:
             int: area.
         """
-        return self.__height * self.__width
+        return self.__width * self.__height
 
     def display(self):
         """Prints in stdout the Rectangle instance with the character #."""

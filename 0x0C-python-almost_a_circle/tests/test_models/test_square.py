@@ -25,12 +25,41 @@ class TestSquareMethods(unittest.TestCase):
     def test_new_square(self):
         """ Test new square """
         s1 = Square(3)
+        s2 = Square(1, 2, 3, 4)
         self.assertEqual(s1.size, 3)
         self.assertEqual(s1.width, 3)
-        self.assertEqual(s1.height, 3)
         self.assertEqual(s1.x, 0)
         self.assertEqual(s1.y, 0)
         self.assertEqual(s1.id, 1)
+        self.assertEqual(s2.size, 1)
+        self.assertEqual(s2.width, 1)
+        self.assertEqual(s2.x, 2)
+        self.assertEqual(s2.y, 3)
+        self.assertEqual(s2.id, 4)
+
+    def test_wrong_type_passed(self):
+        """ Passing a number string """
+        with self.assertRaises(TypeError):
+            Square("1")
+
+    def test_attributes_1(self):
+        """ Test for width and x and y types"""
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Square("1")
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(1, "2")
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            Square(1, 2, "3")
+
+    def test_attributes_2(self):
+        """ Test for width and height ranges"""
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
+            Square(-1)
+            Square(0)
+        with self.assertRaisesRegex(ValueError, "x must be >= 0"):
+            Square(1, -2)
+        with self.assertRaisesRegex(ValueError, "y must be >= 0"):
+            Square(1, 2, -3)
 
     def test_constructor_no_args(self):
         """ Tests constructor with no args """
@@ -56,6 +85,13 @@ were given"
         """ Test area method """
         s1 = Square(4)
         self.assertEqual(s1.area(), 16)
+
+    def test_area_2(self):
+        """ Test area method after modifying size """
+        r1 = Square(4)
+        self.assertEqual(r1.area(), 16)
+        r1.size = 9
+        self.assertEqual(r1.area(), 81)
 
     def test_area_no_args(self):
         """ Test area method with no arguments"""
