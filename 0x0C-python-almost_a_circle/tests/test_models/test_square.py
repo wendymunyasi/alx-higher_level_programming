@@ -37,11 +37,6 @@ class TestSquareMethods(unittest.TestCase):
         self.assertEqual(s2.y, 3)
         self.assertEqual(s2.id, 4)
 
-    def test_wrong_type_passed(self):
-        """ Passing a number string """
-        with self.assertRaises(TypeError):
-            Square("1")
-
     def test_attributes_1(self):
         """ Test for width and x and y types"""
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
