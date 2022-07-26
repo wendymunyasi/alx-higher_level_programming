@@ -50,7 +50,7 @@ How to convert a JSON string to a Python data structure.
 * **3. To JSON string** - Write a function that returns the JSON representation of an object (string). `3-to_json_string.py`.
 * **4. From JSON string to Object** - Write a function that returns an object (Python data structure) represented by a JSON string. `4-from_json_string.py`.
 * **5. Save Object to a file** - Write a function that writes an Object to a text file, using a JSON representation. `5-save_to_json_file.py`.
-* **6. Create object from a JSON file** -Write a function that creates an Object from a “JSON file”. `6-load_from_json_file.py`.
+* **6. Create object from a JSON file** - Write a function that creates an Object from a “JSON file”. `6-load_from_json_file.py`.
 * **7. Load, add, save** - Write a script that adds all arguments to a Python list, and then save them to a file. `7-add_item.py`.
 * **8. Class to JSON** - Write a function that returns the dictionary description with simple data structure (list, dictionary, string, integer and boolean) for JSON serialization of an object. `8-class_to_json.py`.
 * **9. Student to JSON** - Write a class `Student` that defines a student by the given attributes. `9-student.py`.

@@ -31,3 +31,6 @@ All of the following folders are projects done during the studies:
 | [`0x07. Python - Test-driven development`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x07-python-test_driven_development) | It aims to learn more about interactive testing and unit testing in **Python language**.|
 | [`0x08. Python - More Classes and Objects`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x08-python-more_classes) | It aims to learn more about classes and objects in **Python language**.|
 | [`0x09. Python - Everything is object`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x09-python-everything_is_object) | It aims to dive deeper into objects in **Python language**.|
+| [`0x0A. Python - Inheritance`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x0A-python-inheritance) | It aims to learn about inheritance in **Python language**.|
+| [`0x0B. Python - Input/Output`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x0B-python-input_output) | It aims to learn about input, output and using JSON in **Python language**.|
+| [`0x0C. Python - Almost a circle`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x0C-python-almost_a_circle) | It aims to review everything learnt so far in **Python language**.|
