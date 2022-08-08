@@ -1,0 +1,3 @@
+[submodule "0x00-airbnb_clone_the_console"]
+	path = 0x00-airbnb_clone_the_console
+	url = https://github.com/nancymuthee/AirBnB_clone.git
