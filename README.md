@@ -34,4 +34,4 @@ All of the following folders are projects done during the studies:
 | [`0x0A. Python - Inheritance`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x0A-python-inheritance) | It aims to learn about inheritance in **Python language**.|
 | [`0x0B. Python - Input/Output`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x0B-python-input_output) | It aims to learn about input, output and using JSON in **Python language**.|
 | [`0x0C. Python - Almost a circle`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x0C-python-almost_a_circle) | It aims to review everything learnt so far in **Python language**.|
-| [`0x00. AirBnB clone - The console`](https://github.com/nancymuthee/AirBnB_clone) | It aims to learn how to writr a command interpreter in **Python language**.|
+| [`0x00. AirBnB clone - The console`](https://github.com/nancymuthee/AirBnB_clone) | It aims to learn how to write a command interpreter in **Python language**.|
