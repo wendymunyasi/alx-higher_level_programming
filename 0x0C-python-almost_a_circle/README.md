@@ -36,20 +36,6 @@ What is `*args` and how to use it.
 What is `**kwargs` and how to use it.
 How to handle named arguments in a function.
 
-In this project, you will review everything about Python: 
-Import,
-Exceptions,
-Class,
-Private attribute,
-Getter/Setter,
-Class method,
-Static method,
-Inheritance,
-Unittest and 
-Read/Write file.
-
-You will also learn about `args` and `kwargs`, Serialization/Deserialization and JSON.
-
 
 * **0. If it's not tested it doesn't work** - All your files, classes and methods must be unit tested and be PEP 8 validated. `tests/`.
 * **1. Base class** - Write the first class `Base`. `models/base.py`, `models/__init__.py`.
