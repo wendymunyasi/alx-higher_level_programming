@@ -35,3 +35,6 @@ All of the following folders are projects done during the studies:
 | [`0x0B. Python - Input/Output`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x0B-python-input_output) | It aims to learn about input, output and using JSON in **Python language**.|
 | [`0x0C. Python - Almost a circle`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x0C-python-almost_a_circle) | It aims to review everything learnt so far in **Python language**.|
 | [`0x00. AirBnB clone - The console`](https://github.com/nancymuthee/AirBnB_clone) | It aims to learn how to write a command interpreter in **Python language**.|
+| [`0x0D. SQL - Introduction`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x0D-SQL_introduction) | It aims to leanrn about MySQL database and how to use it.|
+| [`0x0E. SQL - More queries`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x0C-python-almost_a_circle) | It aims to learn more about MySQL with regards to queries.|
+| [`0x01. AirBnB clone - Web static`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x0C-python-almost_a_circle) | It aims to build the FE for the AirBnB project.|
