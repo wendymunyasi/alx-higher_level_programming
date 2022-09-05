@@ -1,4 +1,5 @@
 #!/usr/bin/node
+'use strict';
 const process = require('process');
 let max = 0;
 const args = process.argv.slice(2);
