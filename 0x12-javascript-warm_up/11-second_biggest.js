@@ -1,10 +1,7 @@
 #!/usr/bin/node
-'use strict';
 const process = require('process');
-let max = 0;
-const args = process.argv.slice(2);
-if (args.length > 1) {
-  args.sort();
-  max = args[args.length - 2];
+if (process.argv.length < 4) {
+  console.log(0);
+} else {
+  console.log(process.argv.splice(2, process.argv.length - 1).sort().reverse()[1]);
 }
-console.log(max);
