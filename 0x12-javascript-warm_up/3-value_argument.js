@@ -1,9 +1,8 @@
 #!/usr/bin/node
 const process = require('process');
 const message = 'No argument';
-const arg = process.argv[2];
-if (process.argv.length < 3) {
+if (process.argv[2] === undefined) {
   console.log(message);
 } else {
-  console.log(arg);
+  console.log(process.argv[2]);
 }
