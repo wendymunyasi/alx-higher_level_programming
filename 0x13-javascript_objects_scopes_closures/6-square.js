@@ -1,6 +1,10 @@
 #!/usr/bin/node
 const square = require('./5-square');
 class Square extends square {
+  /**
+   * @property {method} charPrint - prints the rectangle using the character c
+   * @returns void
+   */
   charPrint (c) {
     if (c === undefined) {
       c = 'X';
