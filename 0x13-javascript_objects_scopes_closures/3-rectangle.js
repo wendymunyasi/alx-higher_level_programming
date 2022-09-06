@@ -7,6 +7,10 @@ class Rectangle {
     }
   }
 
+  /**
+   * @property {method} print - prints the rectangle using the character X
+   * @returns void
+   */
   print () {
     for (let i = 0; i < this.height; i++) {
       let s = '';
@@ -17,4 +21,5 @@ class Rectangle {
     }
   }
 }
+
 module.exports = Rectangle;
