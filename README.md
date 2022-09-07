@@ -38,3 +38,5 @@ All of the following folders are projects done during the studies:
 | [`0x0D. SQL - Introduction`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x0D-SQL_introduction) | It aims to leanrn about MySQL database and how to use it.|
 | [`0x0E. SQL - More queries`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x0C-python-almost_a_circle) | It aims to learn more about MySQL with regards to queries.|
 | [`0x01. AirBnB clone - Web static`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x0C-python-almost_a_circle) | It aims to build the FE for the AirBnB project.|
+| [`0x12. JavaScript - Warm up`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x12-javascript-warm_up) | It aims to learn about JavaScript programming.|
+| [`0x13. JavaScript - Objects, Scopes and Closures`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x13-javascript_objects_scopes_closures) | It aims to learn about the `this` keyword, ojects, scopes and closures in **JavaScript** language.|

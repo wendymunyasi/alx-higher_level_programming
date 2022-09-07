@@ -28,7 +28,6 @@ Tel: *+254707240068.*
 *   A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified).
 
 
-
 ## Project Description
 What’s an interactive test.
 Why tests are important.
