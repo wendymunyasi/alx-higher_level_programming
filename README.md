@@ -40,3 +40,4 @@ All of the following folders are projects done during the studies:
 | [`0x01. AirBnB clone - Web static`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x0C-python-almost_a_circle) | It aims to build the FE for the AirBnB project.|
 | [`0x12. JavaScript - Warm up`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x12-javascript-warm_up) | It aims to learn about JavaScript programming.|
 | [`0x13. JavaScript - Objects, Scopes and Closures`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x13-javascript_objects_scopes_closures) | It aims to learn about the `this` keyword, ojects, scopes and closures in **JavaScript** language.|
+| [`0x0F. Python - Object-relational mapping`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x0F-python-object_relational_mapping) | It aims to learn about the `this` keyword, ojects, scopes and closures in **JavaScript** language.|
