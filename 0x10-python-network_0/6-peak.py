@@ -3,7 +3,7 @@
 
 
 def find_peak(list_of_integers, left=None, right=None):
-    """recursive function that finds a peak in a list of unsorted integers.
+    """function that finds a peak in a list of unsorted integers.
 
     Args:
         list_of_integers (list): a list of integers
