@@ -2,7 +2,7 @@
 """Module that finds a peak in a list of integers"""
 
 
-def find_peak(list_of_integers, left=None, right=None):
+def find_peak(list_of_integers):
     """function that finds a peak in a list of unsorted integers.
 
     Args:
