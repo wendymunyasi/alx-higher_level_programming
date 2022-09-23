@@ -21,10 +21,12 @@ if __name__ == "__main__":
     payload = {"q": q}
     response = requests.post(url, data=payload)
     try:
-        json_outp = response.json
+        json_outp = response.json()
         if not json_outp:
             print("No result")
         else:
-            print("[{}] {}".format(json_outp.get("id"), json_outp.get("name")))
-    except Exception:
+            my_id = json_outp.get("id")
+            my_name = json_outp.get("name")
+            print("[{}] {}".format(my_id, my_name))
+    except ValueError as invalid_json:
         print("Not a valid JSON")
