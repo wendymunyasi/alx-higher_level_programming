@@ -18,5 +18,8 @@ if __name__ == "__main__":
     query_string = urllib.parse.urlencode(param)
     data = query_string.encode("ascii")
     with urllib.request.urlopen(url, data) as response:
+        # If you do not pass the data argument, urllib uses a GET request.
+        # One way in which GET and POST requests differ is that POST requests
+        # often have "side-effects".
         response_text = response.read().decode("utf-8")
         print(response_text)
