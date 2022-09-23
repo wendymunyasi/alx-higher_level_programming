@@ -18,7 +18,7 @@ if __name__ == "__main__":
         q = sys.argv[1]
     else:
         q = ""
-    payload = {"q": "q"}
+    payload = {"q": q}
     response = requests.post(url, data=payload)
     try:
         json_outp = response.json
