@@ -19,7 +19,7 @@ if __name__ == "__main__":
         response = requests.get(commmits_url)
         json_obj = response.json()
         for i in range(0, 10):
-            print("{}: {}".format(json_obj[i].get('sha'), json_obj[i] \
-                .get('commit').get('author').get('name')))
+            print("{}: {}".format(json_obj[i].get('sha'), json_obj[i]
+                                  .get('commit').get('author').get('name')))
     except ValueError as invalid_json:
         pass
