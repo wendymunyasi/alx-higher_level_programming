@@ -12,8 +12,8 @@ import requests
 
 if __name__ == "__main__":
     try:
-        username = sys.argv[1]
-        repo_name = sys.argv[2]
+        repo_name = sys.argv[1]
+        username = sys.argv[2]
         commmits_url = "https://api.github.com/repos/{}/{}/commits" \
             .format(username, repo_name)
         response = requests.get(commmits_url)
