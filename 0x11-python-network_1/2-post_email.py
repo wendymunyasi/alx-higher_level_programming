@@ -17,7 +17,8 @@ if __name__ == "__main__":
     }
     query_string = urllib.parse.urlencode(param)
     data = query_string.encode("ascii")
-    with urllib.request.Request.urlopen(url, data) as response:
+    req = urllib.request.Request(url, data)
+    with urllib.request.urlopen(req) as response:
         # If you do not pass the data argument, urllib uses a GET request.
         # One way in which GET and POST requests differ is that POST requests
         # often have "side-effects".
