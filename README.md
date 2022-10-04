@@ -22,7 +22,9 @@ All of the following folders are projects done during the studies:
 | Project name | Description |
 | ------------ | ----------- |
 | [`0x00. Python - Hello, World`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x00-python-hello_world) | It aims to learn about python programming, the Zen of Python, how to use Python interpreter and print text using `print` in **Python language**.|
+| [`0x00. AirBnB clone - The console`](https://github.com/nancymuthee/AirBnB_clone) | It aims to learn how to write a command interpreter in **Python language**.|
 | [`0x01. Python - if/else, loops, functions`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x01-python-if_else_loops_functions) | It aims to learn about if, else and loops in **Python language**.|
+| [`0x01. AirBnB clone - Web static`](https://github.com/nancymuthee/AirBnB_clone) | It aims to build the FE for the AirBnB project.|
 | [`0x02. Python - import & modules`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x02-python-import_modules) | It aims to learn about importing functions from another file and modules in **Python language**.|
 | [`0x03. Python - Data Structures: Lists, Tuples`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x03-python-data_structures) | It aims to learn about data structures - lists and tuples - in **Python language**.|
 | [`0x04. Python - More Data Structures: Set, Dictionary`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x04-python-more_data_structures) | It aims to learn more about data structures - sets, dictionaries, lamda functions etc in **Python language**.|
@@ -34,10 +36,8 @@ All of the following folders are projects done during the studies:
 | [`0x0A. Python - Inheritance`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x0A-python-inheritance) | It aims to learn about inheritance in **Python language**.|
 | [`0x0B. Python - Input/Output`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x0B-python-input_output) | It aims to learn about input, output and using JSON in **Python language**.|
 | [`0x0C. Python - Almost a circle`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x0C-python-almost_a_circle) | It aims to review everything learnt so far in **Python language**.|
-| [`0x00. AirBnB clone - The console`](https://github.com/nancymuthee/AirBnB_clone) | It aims to learn how to write a command interpreter in **Python language**.|
 | [`0x0D. SQL - Introduction`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x0D-SQL_introduction) | It aims to leanrn about MySQL database and how to use it.|
-| [`0x0E. SQL - More queries`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x0C-python-almost_a_circle) | It aims to learn more about MySQL with regards to queries.|
-| [`0x01. AirBnB clone - Web static`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x0C-python-almost_a_circle) | It aims to build the FE for the AirBnB project.|
+| [`0x0E. SQL - More queries`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x0E-SQL_more_queries) | It aims to learn more about MySQL with regards to queries.|
 | [`0x10. Python - Network #0`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x10-python-network_0) | It aims to learn about JavaScript programming.|
 | [`0x12. JavaScript - Warm up`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x12-javascript-warm_up) | It aims to learn about HTTP, domains, URLS etc.|
 | [`0x13. JavaScript - Objects, Scopes and Closures`](https://github.com/wendymunyasi/alx-higher_level_programming/tree/master/0x13-javascript_objects_scopes_closures) | It aims to learn about the `this` keyword, ojects, scopes and closures in **JavaScript** language.|
