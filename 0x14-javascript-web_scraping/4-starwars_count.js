@@ -4,7 +4,7 @@ const request = require('request');
 //  first argument is the API URL
 const URL = process.argv[2];
 
-request(URL, (error, body) => {
+request(URL, (error, response, body) => {
   if (error) {
     console.log(error);
   } else if (body) {
