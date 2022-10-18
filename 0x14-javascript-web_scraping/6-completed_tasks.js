@@ -3,7 +3,7 @@ const request = require('request');
 
 // The first argument is the API URL
 const baseURL = process.argv[2];
-request(baseURL, (error, body) => {
+request(baseURL, (error, response, body) => {
   const aggregate = {};
   if (error) {
     console.log(error);
