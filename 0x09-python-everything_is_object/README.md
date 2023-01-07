@@ -1,5 +1,5 @@
 # Project Name
-**0x08. Python - More Classes and Objects**
+**0x09. Python - Everything is object**
 
 ## Author's Details
 Name: *Wendy Munyasi.*
